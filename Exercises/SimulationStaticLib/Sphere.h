@@ -4,16 +4,17 @@
 
 
 class Sphere {
-private:
-	double radius = 10.0;
+public:
+	float radius = 10.0f;
+	float mass = 1.0f;
 	glm::vec3 center = glm::vec3(0.0f, 0.0f, 0.0f);
 	glm::vec3 velocity = glm::vec3(0.0f, 0.0f, 0.0f);
 
-public:
-	Sphere(double radius_, glm::vec3 center_, glm::vec3 velocity_)
-		: radius(radius_), center(center_), velocity(velocity_) {}
+	Sphere(double radius_, glm::vec3 center_, glm::vec3 velocity_, float mass_)
+		: radius(radius_), center(center_), velocity(velocity_), mass(mass_) {	}
 	~Sphere() = default;
 
-	double getRadius() const;
 	bool IsInside(double point);
+	void CollisionResponseToStationary(Sphere& other);
+	glm::vec3 ProcessOfCollision(Sphere& other);
 };
