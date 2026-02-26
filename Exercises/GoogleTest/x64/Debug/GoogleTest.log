@@ -1,5 +1,6 @@
-﻿  test.cpp
-C:\Users\928907\Workspace\SimulationsAndConcurrency\Exercises\SimulationStaticLib\Sphere.h(14,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+﻿  pch.cpp
+  test.cpp
+C:\Users\928907\Workspace\repos\SimulationsAndConcurrency\Exercises\SimulationStaticLib\Sphere.h(15,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file '/test.cpp')
   
-  GoogleTest.vcxproj -> C:\Users\928907\Workspace\SimulationsAndConcurrency\Exercises\x64\Debug\GoogleTest.exe
+  GoogleTest.vcxproj -> C:\Users\928907\Workspace\repos\SimulationsAndConcurrency\Exercises\x64\Debug\GoogleTest.exe

@@ -1,5 +1,9 @@
-﻿  Sphere.cpp
-C:\Users\928907\Workspace\SimulationsAndConcurrency\Exercises\SimulationStaticLib\Sphere.h(14,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+﻿  pch.cpp
+  Collider.cpp
+  SimulationStaticLib.cpp
+  Sphere.cpp
+C:\Users\928907\Workspace\repos\SimulationsAndConcurrency\Exercises\SimulationStaticLib\Sphere.h(15,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file '/Sphere.cpp')
   
-  SimulationStaticLib.vcxproj -> C:\Users\928907\Workspace\SimulationsAndConcurrency\Exercises\x64\Debug\SimulationStaticLib.lib
+  Generating Code...
+  SimulationStaticLib.vcxproj -> C:\Users\928907\Workspace\repos\SimulationsAndConcurrency\Exercises\x64\Debug\SimulationStaticLib.lib
