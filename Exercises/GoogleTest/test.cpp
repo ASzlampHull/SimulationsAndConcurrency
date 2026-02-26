@@ -36,3 +36,12 @@ TEST(ProcessOfCollision, DifferentMasses) {
 	EXPECT_EQ(newVelocity.y, 0.0f);
 	EXPECT_EQ(newVelocity.z, 0.0f);
 }
+
+TEST(SphereRotation, NinetyDegrees) {
+	Sphere sphere(10.0f, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), 1.0f);
+	sphere.AngularVelocityNewOrientation(glm::vec3(0.0f, 1.0f, 0.0f), 1.57079633f); // Rotate 90 degrees around Y-axis
+	EXPECT_EQ(sphere.orientation[0][0], 0.0f);
+	EXPECT_EQ(sphere.orientation[0][2], 1.0f);
+	EXPECT_EQ(sphere.orientation[2][0], -1.0f);
+	EXPECT_EQ(sphere.orientation[2][2], 0.0f);
+}

@@ -26,3 +26,31 @@ glm::vec3 Sphere::ProcessOfCollision(Sphere& other)
 
 	return newVelocity;
 }
+
+// This function calculates the new orientation of the sphere based on its angular velocity and the time step.
+glm::mat4 Sphere::AngularVelocityNewOrientation(glm::vec3 angularVelocity, float deltaTime)
+{
+	// Calculate the magnitude of angular velocity (angular speed in rad/s)
+	float angularSpeed = glm::length(angularVelocity);
+
+	// If angular speed is negligible, no rotation occurs
+	if (angularSpeed < 0.0001f)
+		return orientation;
+
+	// Get the axis of rotation (normalized angular velocity vector)
+	glm::vec3 rotationAxis = glm::normalize(angularVelocity);
+
+	// Calculate the angle to rotate during this time step (angle = angular speed × time)
+	float rotationAngle = angularSpeed * deltaTime;
+
+	// Create an incremental rotation matrix
+	glm::mat4 incrementalRotation = glm::rotate(glm::mat4(1.0f), rotationAngle, rotationAxis);
+
+	// Apply the incremental rotation to the current orientation
+	glm::mat4 newOrientation = incrementalRotation * orientation;
+
+	// Update and return the new orientation
+	orientation = newOrientation;
+	return newOrientation;
+}
+
